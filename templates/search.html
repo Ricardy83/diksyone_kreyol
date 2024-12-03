@@ -1,0 +1,14 @@
+<form method="get">
+    <input type="text" name="q" placeholder="Recherchez un mot..." value="{{ query }}">
+    <button type="submit">Chercher</button>
+</form>
+
+{% if results %}
+    <ul>
+        {% for entry in results %}
+            <li><strong>{{ entry.word }}</strong>: {{ entry.definition }}</li>
+        {% endfor %}
+    </ul>
+{% elif query %}
+    <p>Aucun résultat trouvé pour "{{ query }}"</p>
+{% endif %}
