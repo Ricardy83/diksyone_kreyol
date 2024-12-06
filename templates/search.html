@@ -1,14 +1,30 @@
-<form method="get">
-    <input type="text" name="q" placeholder="Recherchez un mot..." value="{{ query }}">
-    <button type="submit">Chercher</button>
-</form>
-
-{% if results %}
-    <ul>
-        {% for entry in results %}
-            <li><strong>{{ entry.word }}</strong>: {{ entry.definition }}</li>
-        {% endfor %}
-    </ul>
-{% elif query %}
-    <p>Aucun résultat trouvé pour "{{ query }}"</p>
-{% endif %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title> Diksyone Kreyol Ayisyen</title>
+</head>
+<body>
+    <div class="search-bar">
+    <form method="get" >
+        <input type="text" name="q" placeholder="chèche yon mo..." value="{{ query }}">
+        <button type="submit">Chèche</button>
+    </form>
+    </div>
+    
+    <div class="result">
+        {% if results %}
+            <ul>
+                {% for entry in results %}
+                    <li><strong>{{ entry.word }}</strong>: {{ entry.definition }}</li>
+                {% endfor %}
+            </ul>
+        {% elif query %}
+            <p>Pa jwenn rezilta pou "{{ query }}"</p>
+        {% endif %}
+    </div>
+</body>
+</html>
