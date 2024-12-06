@@ -1,0 +1,46 @@
+/* ----- Responsive Design ----- */
+
+/* Pour les écrans de 768px ou moins (tablettes et téléphones) */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 90%; /* Ajustement de la largeur */
+    }
+
+    .search-bar input[type="text"] {
+        font-size: 14px;
+    }
+
+    .search-bar button {
+        font-size: 14px;
+    }
+
+    .result {
+        width: 95%; /* Ajustement de la largeur pour occuper presque tout l'écran */
+    }
+
+    .result li {
+        font-size: 14px; /* Texte légèrement plus petit */
+    }
+
+    .result p {
+        font-size: 14px;
+    }
+}
+
+/* Pour les écrans de 480px ou moins (petits téléphones) */
+@media (max-width: 480px) {
+    .search-bar input[type="text"],
+    .search-bar button {
+        font-size: 12px; /* Réduction de la taille de la police */
+        padding: 8px; /* Réduction de l'espacement intérieur */
+    }
+
+    .result li {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+
+    .result {
+        padding: 10px; /* Réduction de l'espacement */
+    }
+}
