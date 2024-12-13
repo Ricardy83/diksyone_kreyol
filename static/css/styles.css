@@ -50,7 +50,7 @@ body {
 
 /* Résultats */
 .result {
-    width: 50%; /* Correspond à la largeur de la barre de recherche */
+    width: 25%; /* Correspond à la largeur de la barre de recherche */
     background-color: #fff;
     padding: 15px;
     border-radius: 5px;
