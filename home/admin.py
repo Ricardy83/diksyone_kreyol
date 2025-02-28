@@ -1,4 +1,8 @@
 from django.contrib import admin
 from .models import *
-# Register your models here.
-admin.site.register(DictionaryEntry)
+
+
+admin.site.register(Mot)
+admin.site.register(Synonyme)
+admin.site.register(Antonyme)
+admin.site.register(Expression)
